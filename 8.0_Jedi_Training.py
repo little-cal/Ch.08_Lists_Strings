@@ -12,7 +12,10 @@ a_list = [3,12,3,5,3,4,6,8,5,3,5,6,3,2,4]
 b_list = [4,15,2,7,8,3,1,10,9]
 c_list = [5,10,13,12,5,9,2,6,1,8,8,9,11,13,14,8,2,2,6,3,9,8,10]
 
-
+# list_total = 0
+# for item in a_list:
+#     list_total += item
+# print(list_total/len(a_list))
 
 '''
 2.) USERNAME:  (3pts)
@@ -20,8 +23,14 @@ Write a program that will strip the username (whatever is in front of the @ symb
 from any e-mail address and print it. First ask the user for their e-mail address.
 '''
 
-
-
+# user_email = input("Please enter your email.\n:")
+# char_num = 0
+# for letter in user_email:
+#     if letter == "@":
+#         break
+#     else:
+#         char_num += 1
+# print(user_email[:char_num])
 '''
 TEXT FORMATTING:  (4pts)
 3.) Make following program output the following:
@@ -34,8 +43,9 @@ TEXT FORMATTING:  (4pts)
      '''
 score = 41237
 highscore = 1023407
-print("Score:      " + str(score) )
-print("High score: " + str(highscore) )
+
+# print(f"Score:{score:>16,d}")
+# print(f"High score:{highscore:>11,d}")
 
 
 '''
@@ -46,7 +56,14 @@ Keep repeating this until the user enters a non 1-12 number to quit.
 Once the user quits, print "Goodbye!"
 '''
 
-months = "JanFebMarAprMayJunJulAugSepOctNovDec"
+# months = "JanFebMarAprMayJunJulAugSepOctNovDec"
+# done = False
+# while not done:
+#     month_num = int(input("Enter any month number 1-12: "))
+#     print(months[month_num*3-3:month_num*3])
+#     if month_num > 12 or month_num < 1:
+#         done = True
+#         break
 
 
 
@@ -62,3 +79,14 @@ along with the shift number?
 '''
 Secret_Message="Lxwp{j}~uj}rxw|*)bx~)l{jltnm)}qn)lxmn7)]qn)ox{ln)r|)\][XWP)r}q)x~*"
 
+encrypted_text = ""
+
+for i in range(-20, 21):
+    for c in Secret_Message:
+        x = ord(c)
+        x = x + i
+        c2 = chr(x)
+        encrypted_text = encrypted_text + c2
+    print(encrypted_text)
+    print(i)
+    encrypted_text = ""
