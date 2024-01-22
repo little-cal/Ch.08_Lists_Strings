@@ -327,7 +327,7 @@ class Ghost:
 
 # instructions / info for the game
 print("Welcome to my fun Ghost Game.")
-print("The goal of this game is to find to navigate the house and locate the ghost.")
+print("The goal of this game is to navigate the house and locate the ghost.")
 print("To find the ghost, you will be able to do certain actions within a room.")
 print("\n\033[3m" + 'During action selection, type the number followed by info to see it\'s information.' + "\033[0m")
 print("\nTo win this game, you will have to successfully exorcise the ghost.")
@@ -346,7 +346,7 @@ else:
 # creating the ghost
 ghost = Ghost(difficulty, random.randint(1, 14), 1, 0, random.randint(50, 500), False)
 # room 8 are the stairs, re-rolls location value
-while ghost.location == 8:
+while ghost.location == 9:
     ghost.location = random.randint(1, 14)
 
 # changes base anger depending on difficulty, default is zero
